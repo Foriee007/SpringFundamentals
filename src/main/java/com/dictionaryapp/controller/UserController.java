@@ -42,11 +42,18 @@ public class UserController {
                              RedirectAttributes redirectAttributes){
         //Data get register input info(user,email,password,confirm
         //Validate data, return data, Register user
-        if (bindingResult.hasErrors()){
+        if (bindingResult.hasErrors() || !userService.register(data)){
             redirectAttributes.addFlashAttribute("registerData", data);
             redirectAttributes.addFlashAttribute("org.springframework.validation.BindingResult.registerData",bindingResult);
             return "redirect:/register";
         }
+
+        /*boolean success = userService.register(data);  // same as (bindingResult.hasErrors()|| userService.register(data))
+        if (!success){
+            redirectAttributes.addFlashAttribute("registerData", data);
+            redirectAttributes.addFlashAttribute("org.springframework.validation.BindingResult.registerData",bindingResult);
+            return "redirect:/register";
+        }*/
         return "redirect:/login";
     }
 }
