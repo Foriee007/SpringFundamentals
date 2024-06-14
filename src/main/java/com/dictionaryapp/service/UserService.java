@@ -24,9 +24,11 @@ public class UserService {
             return false;
         }
         Optional<User> byEmail=  userRepository.findByEmail(data.getEmail());
-        if(byEmail.equals(data.getEmail())){
+        if(byEmail.isPresent()){
             return false;
         }
+        User mapped = modelMapper.map(data, User.class);
+        userRepository.save(mapped);
 
         return true;
     }
