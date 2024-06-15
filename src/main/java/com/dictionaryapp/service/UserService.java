@@ -1,5 +1,7 @@
 package com.dictionaryapp.service;
 
+import com.dictionaryapp.config.UserSession;
+import com.dictionaryapp.model.dto.UserLoginDto;
 import com.dictionaryapp.model.dto.UserRegisterDto;
 import com.dictionaryapp.model.entity.User;
 import com.dictionaryapp.repo.UserRepository;
@@ -14,12 +16,14 @@ public class UserService {
     private UserRepository userRepository;
     private final ModelMapper modelMapper;
     private  final PasswordEncoder passwordEncoder;
+    private final UserSession userSession;
 
 
-    public UserService(UserRepository userRepository, ModelMapper modelMapper, PasswordEncoder passwordEncoder) {
+    public UserService(UserRepository userRepository, ModelMapper modelMapper, PasswordEncoder passwordEncoder, UserSession userSession) {
         this.userRepository = userRepository;
         this.modelMapper = modelMapper;
         this.passwordEncoder = passwordEncoder;
+        this.userSession = userSession;
     }
 
     public boolean register(UserRegisterDto data){
@@ -40,4 +44,20 @@ public class UserService {
 
         return true;
     }
+
+    //Login logic
+    public boolean login(UserLoginDto data){
+        Optional<User> byUsername =  userRepository.findByUserName(data.getUsername());
+
+        if (byUsername.isEmpty()){
+            return  false;
+        }
+        User user = byUsername.get();
+        if (!passwordEncoder.matches(data.getPassword(), user.getPassword())){return  false;}
+        //Add to session
+
+        return  true;
+    }
+
+
 }
