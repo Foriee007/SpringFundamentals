@@ -1,14 +1,17 @@
 package com.dictionaryapp.model.dto;
 
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
 public class UserLoginDto {
-    @NotBlank
-    @Size(min=3, max= 20)
+
+    @Size(min = 3, max = 20, message = "Username length must be between 3 and 20 characters!")
+    @NotNull
     private String username;
-    @NotBlank
-    @Size(min=3, max= 20)
+
+    @Size(min = 3, max = 20, message = "Username length must be between 3 and 20 characters!")
+    @NotNull
     private String password;
 
     public UserLoginDto() {

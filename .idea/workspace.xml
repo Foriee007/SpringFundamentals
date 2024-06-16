@@ -4,19 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="70193702-bf2a-4e83-ab89-9e8113738f99" name="Changes" comment="User Registration completed">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dictionaryapp/config/UserSession.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dictionaryapp/model/dto/UserLoginDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dictionaryapp/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dictionaryapp/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dictionaryapp/repo/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dictionaryapp/repo/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dictionaryapp/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dictionaryapp/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dictionaryapp/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dictionaryapp/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dictionaryapp/repo/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dictionaryapp/repo/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dictionaryapp/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dictionaryapp/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
+    <list default="true" id="70193702-bf2a-4e83-ab89-9e8113738f99" name="Changes" comment="Add word task complete">
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dictionaryapp/model/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dictionaryapp/model/entity/User.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,22 +16,23 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 1
-}]]></component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2hvNvQ5Ms3rPGP5X52sj6wT0mok" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -70,6 +60,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.dictionaryapp.service" />
       <recent name="com.dictionaryapp.model.entity" />
     </key>
   </component>
@@ -99,7 +90,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1718294219208</updated>
-      <workItem from="1718294227691" duration="39616000" />
+      <workItem from="1718294227691" duration="48554000" />
+      <workItem from="1718470825929" duration="37691000" />
     </task>
     <task id="LOCAL-00001" summary="Spring App with Thymeleaf template engine">
       <option name="closed" value="true" />
@@ -125,7 +117,31 @@
       <option name="project" value="LOCAL" />
       <updated>1718397606222</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="User Login completed">
+      <option name="closed" value="true" />
+      <created>1718428556474</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1718428556474</updated>
+    </task>
+    <task id="LOCAL-00005" summary="User Login completed">
+      <option name="closed" value="true" />
+      <created>1718428681766</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1718428681766</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Add word task complete">
+      <option name="closed" value="true" />
+      <created>1718560268027</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1718560268027</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,6 +162,9 @@
     <MESSAGE value="Spring App with Thymeleaf template engine" />
     <MESSAGE value="add User Register functionality" />
     <MESSAGE value="User Registration completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="User Registration completed" />
+    <MESSAGE value="User Login/Logout nav bar and redirect complete" />
+    <MESSAGE value="User Login completed" />
+    <MESSAGE value="Add word task complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add word task complete" />
   </component>
 </project>

@@ -3,7 +3,6 @@ package com.dictionaryapp.model.entity;
 
 import jakarta.persistence.*;
 
-import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -15,18 +14,35 @@ public class User {
 
     @Column(unique = true, nullable = false)
     private String userName;
+
     @Column(nullable = false)
     private String password;
 
     @Column(unique = true, nullable = false)
     private String email;
 
-    @OneToMany(mappedBy = "addedBy")
+    /*@OneToMany(mappedBy = "addedBy")
+    private Set<Word> addedWords;*/
+    /* public User() {
+        addedWords = new HashSet<>();
+    }*/
+
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<Word> addedWords;
 
-    public User() {
-        addedWords = new HashSet<>();
+    public void setAddedWords(Set<Word> words) {
+        this.addedWords = words;
     }
+    public User() {
+    }
+
+    public Set<Word> getAddedWords() {
+        return addedWords;
+    }
+
+    /*public void setAddedWords(Set<Word> addedWords) {
+        this.addedWords = addedWords;
+    }*/
 
     public long getId() {
         return id;
@@ -60,13 +76,7 @@ public class User {
         this.email = email;
     }
 
-    public Set<Word> getAddedWords() {
-        return addedWords;
-    }
 
-    public void setAddedWords(Set<Word> addedWords) {
-        this.addedWords = addedWords;
-    }
 }
 
 
