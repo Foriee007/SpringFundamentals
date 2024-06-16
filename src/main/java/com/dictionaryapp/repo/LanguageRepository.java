@@ -1,7 +1,14 @@
 package com.dictionaryapp.repo;
 
 import com.dictionaryapp.model.entity.Language;
+import com.dictionaryapp.model.entity.LanguageEnum;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface LanguageRepository extends JpaRepository<Language,Long > {
+import java.util.Optional;
+
+@Repository
+public interface LanguageRepository extends JpaRepository<Language, Long > {
+
+    Optional<Language> findByLanguageName(LanguageEnum languageEnum);
 }

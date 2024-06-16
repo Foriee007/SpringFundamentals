@@ -4,19 +4,40 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="70193702-bf2a-4e83-ab89-9e8113738f99" name="Changes" comment="User Registration completed">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dictionaryapp/config/UserSession.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dictionaryapp/model/dto/UserLoginDto.java" afterDir="false" />
+    <list default="true" id="70193702-bf2a-4e83-ab89-9e8113738f99" name="Changes" comment="User Login/Logout nav bar and redirect complete">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dictionaryapp/controller/HomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dictionaryapp/controller/WordController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dictionaryapp/model/dto/AddWordDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dictionaryapp/repo/WordRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dictionaryapp/service/LanguageService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dictionaryapp/service/WordService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/dictionaryapp/controller/HomeController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dictionaryapp/config/UserSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dictionaryapp/config/UserSession.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dictionaryapp/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dictionaryapp/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dictionaryapp/model/dto/UserLoginDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dictionaryapp/model/dto/UserLoginDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dictionaryapp/model/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dictionaryapp/model/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dictionaryapp/model/entity/Word.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dictionaryapp/model/entity/Word.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dictionaryapp/repo/LanguageRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dictionaryapp/repo/LanguageRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dictionaryapp/repo/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dictionaryapp/repo/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dictionaryapp/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dictionaryapp/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/commons.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/commons.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/word-add.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/word-add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dictionaryapp/config/UserSession.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dictionaryapp/config/UserSession.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/dictionaryapp/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dictionaryapp/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dictionaryapp/model/dto/UserLoginDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dictionaryapp/model/dto/UserLoginDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dictionaryapp/model/entity/Word.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dictionaryapp/model/entity/Word.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dictionaryapp/repo/LanguageRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dictionaryapp/repo/LanguageRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/dictionaryapp/repo/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dictionaryapp/repo/UserRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/dictionaryapp/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dictionaryapp/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/commons.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/commons.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/word-add.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/word-add.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,22 +48,23 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 1
-}]]></component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2hvNvQ5Ms3rPGP5X52sj6wT0mok" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -70,6 +92,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.dictionaryapp.service" />
       <recent name="com.dictionaryapp.model.entity" />
     </key>
   </component>
@@ -99,7 +122,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1718294219208</updated>
-      <workItem from="1718294227691" duration="39616000" />
+      <workItem from="1718294227691" duration="48554000" />
+      <workItem from="1718470825929" duration="37354000" />
     </task>
     <task id="LOCAL-00001" summary="Spring App with Thymeleaf template engine">
       <option name="closed" value="true" />
@@ -125,7 +149,23 @@
       <option name="project" value="LOCAL" />
       <updated>1718397606222</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="User Login completed">
+      <option name="closed" value="true" />
+      <created>1718428556474</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1718428556474</updated>
+    </task>
+    <task id="LOCAL-00005" summary="User Login completed">
+      <option name="closed" value="true" />
+      <created>1718428681766</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1718428681766</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,6 +186,8 @@
     <MESSAGE value="Spring App with Thymeleaf template engine" />
     <MESSAGE value="add User Register functionality" />
     <MESSAGE value="User Registration completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="User Registration completed" />
+    <MESSAGE value="User Login completed" />
+    <MESSAGE value="User Login/Logout nav bar and redirect complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="User Login/Logout nav bar and redirect complete" />
   </component>
 </project>

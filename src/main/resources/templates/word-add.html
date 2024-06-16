@@ -8,13 +8,18 @@
     <h1 class="text-center mt-2"><span class="badge badge-pill badge-dark">Add word</span></h1>
     <hr class="hr-3 w-25 bg-white"/>
 
-    <form class="mx-auto w-25 bg-blur rounded" method="" action="">
+    <form class="mx-auto w-25 bg-blur rounded"
+          th:method="POST"
+          th:action="@{/word/add}"
+          th:object="${addWordDTO}">
 
         <div class="form-group">
             <div class="label-holder text-white textCol d-flex justify-content-center">
                 <label for="term" class="h4 mb-2">Term</label>
             </div>
-            <textarea type="text" class="form-control" id="term" name="term"></textarea>
+            <textarea th:field="*{term}"
+                      th:errorclass="'is-invalid bg-danger'"
+                      type="text" class="form-control" id="term" name="term"></textarea>
             <small class="text-danger">Term error message</small>
         </div>
 
@@ -22,7 +27,9 @@
             <div class="label-holder text-white textCol d-flex justify-content-center">
                 <label for="translation" class="h4 mb-2">Translation</label>
             </div>
-            <textarea type="text" class="form-control" id="translation" name="translation"></textarea>
+            <textarea th:field="*{translation}"
+                      th:errorclass="'is-invalid bg-danger'"
+                      type="text" class="form-control" id="translation" name="translation"></textarea>
             <small class="text-danger">Translation error message</small>
         </div>
 

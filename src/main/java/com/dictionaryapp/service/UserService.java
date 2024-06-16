@@ -9,6 +9,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -25,7 +26,7 @@ public class UserService {
         this.passwordEncoder = passwordEncoder;
         this.userSession = userSession;
     }
-
+    // Registration
     public boolean register(UserRegisterDto data){
         if (!data.getPassword().equals(data.getConfirmPassword())){
             return false;
@@ -53,11 +54,27 @@ public class UserService {
             return  false;
         }
         User user = byUsername.get();
-        if (!passwordEncoder.matches(data.getPassword(), user.getPassword())){return  false;}
+        if (!passwordEncoder.matches(data.getPassword(), user.getPassword())) {
+            return  false;
+        }
         //Add to session
+        userSession.login(user);
 
         return  true;
     }
 
 
+    public void logout() {
+        userSession.logout();
+    }
+
+    public void removeAllWords() {
+        List<User> all = userRepository.findAll();
+        all.stream().forEach(user -> {user.getAddedWords().clear();
+            userRepository.save(user);
+        });
+    }
+    public Optional<User> findUserById(Long id) {
+        return userRepository.findById(id);
+    }
 }

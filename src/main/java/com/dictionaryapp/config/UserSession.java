@@ -2,35 +2,35 @@ package com.dictionaryapp.config;
 
 import com.dictionaryapp.model.entity.User;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
 import org.springframework.web.context.annotation.SessionScope;
 
-@Configuration
+@Component
 @SessionScope
 public class UserSession {
     private  long id;
-    private String name;
+    private String username;
 
     public void login(User user) {
-        this.id = user.getId();
-        this.name = user.getUserName();
+        this.id = user.getId(); // Need only ID, if it has greetings, add username
+        this.username = user.getUserName();
     }
-
-//    public LoggedUser() {
-//    }
 
     public long getId() {
         return id;
     }
 
-    public void setId(long id) {
-        this.id = id;
+
+    public boolean userLoggedIn(){
+        return id > 0;
     }
 
-    public String getName() {
-        return name;
+    public void logout() {
+        id = 0;
+        username = "";
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String username(){
+        return username; // goes to nav-bar welcome user
     }
 }

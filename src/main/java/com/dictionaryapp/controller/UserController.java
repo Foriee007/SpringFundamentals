@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.ui.Model;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.naming.Binding;
@@ -37,7 +38,9 @@ public class UserController {
 
         ModelAndView mnv = new ModelAndView();
         mnv.addObject("registerData",userRegisterDto); //th key = "registerData'*/
-
+        if (userSession.userLoggedIn()){
+            return "redirect:/home"; // Security If logged in redirect to home
+        }
         return  "register";//mnv;
     }
     @PostMapping("/register")
@@ -46,6 +49,8 @@ public class UserController {
                              RedirectAttributes redirectAttributes){
         //Data get register input info(user,email,password,confirm
         //Validate data, return data, Register user
+
+
         if (bindingResult.hasErrors() || !userService.register(data)){
             redirectAttributes.addFlashAttribute("registerData", data);
             redirectAttributes.addFlashAttribute("org.springframework.validation.BindingResult.registerData",bindingResult);
@@ -67,26 +72,39 @@ public class UserController {
     }
 
     @GetMapping("/login")
-    public String viewLogin(){
+    public String viewLogin(Model model){
+        if (userSession.userLoggedIn()){
+            return "redirect:/home"; // Use for index page redirect to home
+        }
         return "login";
     }
     @PostMapping("/login")
-    public String doLogin(@Valid UserLoginDto data,
+    public String doLogin(@Valid UserLoginDto lodinData,
                           BindingResult bindingResult,
                           RedirectAttributes redirectAttributes){
         if (bindingResult.hasErrors()){
-            redirectAttributes.addFlashAttribute("lodinData", data);
+            redirectAttributes.addFlashAttribute("lodinData", lodinData);
             redirectAttributes.addFlashAttribute("org.springframework.validation.BindingResult.loginData",bindingResult);
             return "redirect:/login";
         }
 
-        boolean success = userService.login(data);
+        boolean success = userService.login(lodinData);
         if (!success) {
-            redirectAttributes.addFlashAttribute("loginData", data);
-            redirectAttributes.addFlashAttribute("userOrPasswordNotMatch", true);
+            redirectAttributes.addFlashAttribute("loginData", lodinData);
+            redirectAttributes.addFlashAttribute("validCredentials", false);
             return "redirect:/login";
         }
+        //this.userService.login(loginDto.getUsername());
 
         return "redirect:/home";
+    }
+    @PostMapping("/logout")
+    public String logout(){
+        userService.logout();
+        return "redirect:/";
+    }
+    @ModelAttribute
+    public void addAttribute(Model model) {
+        model.addAttribute("validCredentials");
     }
 }

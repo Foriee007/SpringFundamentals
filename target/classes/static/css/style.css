@@ -76,3 +76,8 @@ footer {
 .badge-secondary{
     background-color: #720a75;
 }
+.btn-logout{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
