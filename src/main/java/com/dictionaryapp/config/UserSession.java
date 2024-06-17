@@ -13,7 +13,7 @@ public class UserSession {
 
     public void login(User user) {
         this.id = user.getId(); // Need only ID, if it has greetings, add username
-        this.username = user.getUserName();
+        this.username = user.getUsername();
     }
 
     public long getId() {

@@ -1,6 +1,7 @@
 package com.dictionaryapp.service;
 
 import com.dictionaryapp.config.UserSession;
+import com.dictionaryapp.model.dto.UserDto;
 import com.dictionaryapp.model.dto.UserLoginDto;
 import com.dictionaryapp.model.dto.UserRegisterDto;
 import com.dictionaryapp.model.entity.User;
@@ -35,7 +36,7 @@ public class UserService {
         if(byEmail.isPresent()){
             return false;
         }
-        Optional<User> byUsername=  userRepository.findByUserName(data.getUsername());
+        Optional<User> byUsername=  userRepository.findByUsername(data.getUsername());
         if(byUsername.isPresent()){
             return false;
         }
@@ -48,7 +49,7 @@ public class UserService {
 
     //Login logic
     public boolean login(UserLoginDto data){
-        Optional<User> byUsername =  userRepository.findByUserName(data.getUsername());
+        Optional<User> byUsername =  userRepository.findByUsername(data.getUsername());
 
         if (byUsername.isEmpty()){
             return  false;
@@ -63,7 +64,6 @@ public class UserService {
         return  true;
     }
 
-
     public void logout() {
         userSession.logout();
     }
@@ -77,4 +77,22 @@ public class UserService {
     public Optional<User> findUserById(Long id) {
         return userRepository.findById(id);
     }
-}
+    private UserDto mapUserDTO(User user) {
+        return new UserDto()
+                .setId(user.getId())
+                .setEmail(user.getEmail())
+                .setUsername(user.getUsername());
+    }
+
+    private User getUserByUsername(String username) {
+        return this.userRepository.findByUsername(username).orElse(null);
+    }
+
+    public UserDto findUserByUsername(String username) {
+        User user = this.getUserByUsername(username);
+        if (user == null) {
+            return null;
+        }
+        return this.mapUserDTO(user);
+    }
+    }

@@ -5,18 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="70193702-bf2a-4e83-ab89-9e8113738f99" name="Changes" comment="User Registration completed">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dictionaryapp/config/UserSession.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dictionaryapp/model/dto/UserLoginDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dictionaryapp/model/dto/UserDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dictionaryapp/validation/UniqueEmailValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dictionaryapp/validation/UniqueUsernameValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dictionaryapp/validation/annotation/UniqueEmail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/dictionaryapp/validation/annotation/UniqueUsername.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dictionaryapp/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dictionaryapp/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dictionaryapp/config/UserSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dictionaryapp/config/UserSession.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dictionaryapp/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dictionaryapp/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dictionaryapp/controller/WordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dictionaryapp/controller/WordController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dictionaryapp/model/dto/UserRegisterDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dictionaryapp/model/dto/UserRegisterDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dictionaryapp/model/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dictionaryapp/model/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dictionaryapp/repo/LanguageRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dictionaryapp/repo/LanguageRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dictionaryapp/repo/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dictionaryapp/repo/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dictionaryapp/repo/WordRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dictionaryapp/repo/WordRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dictionaryapp/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dictionaryapp/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dictionaryapp/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dictionaryapp/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dictionaryapp/service/WordService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dictionaryapp/service/WordService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/word-add.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/word-add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dictionaryapp/config/UserSession.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dictionaryapp/config/UserSession.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dictionaryapp/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dictionaryapp/controller/HomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dictionaryapp/controller/WordController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dictionaryapp/controller/WordController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dictionaryapp/model/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dictionaryapp/model/entity/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/dictionaryapp/repo/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dictionaryapp/repo/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dictionaryapp/repo/WordRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dictionaryapp/repo/WordRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/dictionaryapp/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dictionaryapp/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dictionaryapp/service/WordService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dictionaryapp/service/WordService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/word-add.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/word-add.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +43,7 @@
       <list>
         <option value="Enum" />
         <option value="Interface" />
+        <option value="AnnotationType" />
         <option value="Class" />
       </list>
     </option>
@@ -35,14 +51,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 1
-}]]></component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -65,6 +81,9 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Problems",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -147,5 +166,15 @@
     <MESSAGE value="add User Register functionality" />
     <MESSAGE value="User Registration completed" />
     <option name="LAST_COMMIT_MESSAGE" value="User Registration completed" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.sql.SQLException" package="java.sql" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

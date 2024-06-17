@@ -1,17 +1,22 @@
 package com.dictionaryapp.model.dto;
 
+import com.dictionaryapp.validation.annotation.UniqueEmail;
+import com.dictionaryapp.validation.annotation.UniqueUsername;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 
 public class UserRegisterDto {
 
+
+
     @Size(min=3, max= 20)
-    @NotBlank
+    @NotBlank(message = "Username cannot be empty!")
     private String username;
 
-    @NotBlank
-    @Email
+
+    @NotBlank(message = "Email cannot be empty!")
+    @Email(message = "Enter valid email!")
     private String email;
 
     @NotBlank

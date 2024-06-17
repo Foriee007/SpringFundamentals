@@ -2,13 +2,10 @@ package com.dictionaryapp.controller;
 
 import com.dictionaryapp.config.UserSession;
 import com.dictionaryapp.model.dto.AddWordDto;
-import com.dictionaryapp.model.dto.UserRegisterDto;
-import com.dictionaryapp.model.entity.Language;
 import com.dictionaryapp.service.WordService;
-import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
-import org.springframework.ui.Model;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -52,7 +49,7 @@ public class WordController {
         if (bindingResult.hasErrors()){
             redirectAttributes.addFlashAttribute("AddWordData", addWordDto);
             redirectAttributes.addFlashAttribute("org.springframework.validation.BindingResult.AddWordData",bindingResult);
-            return "redirect:/words";
+            return "redirect:/word/add";
         }
         wordService.add(addWordDto,userSession.getId());
         return  "redirect:/home";
