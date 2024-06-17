@@ -74,6 +74,7 @@ public class UserService {
         return userRepository.findById(id);
     }
 
+
     private UserDto mapUserDTO(User user) {
         return new UserDto()
                 .setId(user.getId())
