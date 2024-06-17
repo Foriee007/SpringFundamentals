@@ -17,7 +17,7 @@ import java.util.Optional;
 public class UserService {
     private UserRepository userRepository;
     private final ModelMapper modelMapper;
-    private  final PasswordEncoder passwordEncoder;
+    private final PasswordEncoder passwordEncoder;
     private final UserSession userSession;
 
 
@@ -27,17 +27,18 @@ public class UserService {
         this.passwordEncoder = passwordEncoder;
         this.userSession = userSession;
     }
+
     // Registration
-    public boolean register(UserRegisterDto data){
-        if (!data.getPassword().equals(data.getConfirmPassword())){
+    public boolean register(UserRegisterDto data) {
+        if (!data.getPassword().equals(data.getConfirmPassword())) {
             return false;
         }
-        Optional<User> byEmail=  userRepository.findByEmail(data.getEmail());
-        if(byEmail.isPresent()){
+        Optional<User> byEmail = userRepository.findByEmail(data.getEmail());
+        if (byEmail.isPresent()) {
             return false;
         }
-        Optional<User> byUsername=  userRepository.findByUsername(data.getUsername());
-        if(byUsername.isPresent()){
+        Optional<User> byUsername = userRepository.findByUsername(data.getUsername());
+        if (byUsername.isPresent()) {
             return false;
         }
         User mapped = modelMapper.map(data, User.class);
@@ -48,35 +49,31 @@ public class UserService {
     }
 
     //Login logic
-    public boolean login(UserLoginDto data){
-        Optional<User> byUsername =  userRepository.findByUsername(data.getUsername());
+    public boolean login(UserLoginDto data) {
+        Optional<User> byUsername = userRepository.findByUsername(data.getUsername());
 
-        if (byUsername.isEmpty()){
-            return  false;
+        if (byUsername.isEmpty()) {
+            return false;
         }
         User user = byUsername.get();
         if (!passwordEncoder.matches(data.getPassword(), user.getPassword())) {
-            return  false;
+            return false;
         }
         //Add to session
         userSession.login(user);
 
-        return  true;
+        return true;
     }
 
     public void logout() {
         userSession.logout();
     }
 
-    public void removeAllWords() {
-        List<User> all = userRepository.findAll();
-        all.stream().forEach(user -> {user.getAddedWords().clear();
-            userRepository.save(user);
-        });
-    }
+     // User Validation
     public Optional<User> findUserById(Long id) {
         return userRepository.findById(id);
     }
+
     private UserDto mapUserDTO(User user) {
         return new UserDto()
                 .setId(user.getId())
@@ -95,4 +92,4 @@ public class UserService {
         }
         return this.mapUserDTO(user);
     }
-    }
+}

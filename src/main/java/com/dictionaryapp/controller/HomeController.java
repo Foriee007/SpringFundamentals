@@ -75,7 +75,7 @@ public class HomeController {
 
     @GetMapping("/home/remove-all")
     String removeAll(Model model){
-        userService.removeAllWords();
+        wordService.removeAllWords();
         return "redirect:/home";
     }
 }

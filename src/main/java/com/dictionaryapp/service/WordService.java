@@ -87,6 +87,14 @@ public class WordService {
         this.wordRepository.deleteById(id);
     }
 
+    public void removeAllWords() {
+        List<User> all = userRepository.findAll();
+        all.stream().forEach(user -> {
+            user.getAddedWords().clear();
+            userRepository.save(user);
+        });
+    }
+
 
     public long getAllCount() {
         long count = wordRepository.count();

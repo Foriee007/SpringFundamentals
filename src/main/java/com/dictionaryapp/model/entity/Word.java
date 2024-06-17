@@ -28,7 +28,7 @@ public class Word {
     private Language language;
 
     @ManyToOne(fetch = FetchType.EAGER)//@ManyToOne
-   private User addedBy;
+    private User addedBy;
 
     public Word() {
     }
